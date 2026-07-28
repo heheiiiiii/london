@@ -390,136 +390,6 @@ ul {
 
 }
 
-/* =====================
-   PROCESS
-===================== */
-
-.process-grid {
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:24px;
-
-    max-width:750px;
-
-    margin:0 auto;
-
-}
-
-
-.process-card {
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:24px;
-
-    padding:30px;
-
-    background:#ffffff;
-
-    border:1px solid var(--border);
-
-    border-radius:var(--radius);
-
-}
-
-
-.process-card > span {
-
-    flex-shrink:0;
-
-    width:48px;
-
-    height:48px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:var(--accent);
-
-    color:white;
-
-    border-radius:50%;
-
-    font-weight:700;
-
-    font-size:15px;
-
-}
-
-
-.process-content {
-
-    flex:1;
-
-}
-
-
-.process-content h3 {
-
-    font-size:20px;
-
-    color:var(--primary);
-
-    margin-bottom:8px;
-
-}
-
-
-.process-content p {
-
-    font-size:15px;
-
-    color:var(--text-light);
-
-}
-
-
-@media(max-width:768px){
-
-    .process-card {
-
-        padding:22px;
-
-        gap:16px;
-
-    }
-
-
-    .process-card > span {
-
-        width:40px;
-
-        height:40px;
-
-        font-size:13px;
-
-    }
-
-
-    .process-content h3 {
-
-        font-size:17px;
-
-    }
-
-
-    .process-content p {
-
-        font-size:14px;
-
-    }
-
-}
-
-
 
 
 
@@ -655,5 +525,415 @@ ul {
         translateY(0);
 
     }
+
+   /* =====================
+   WORK SECTION
+===================== */
+
+.work-compare {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    max-width:900px;
+
+    margin:0 auto;
+
+}
+
+
+.work-box {
+
+    padding:45px 40px;
+
+    border-radius:var(--radius);
+
+    background:white;
+
+    border:1px solid var(--border);
+
+}
+
+
+.work-box h3 {
+
+    font-size:26px;
+
+    margin-bottom:30px;
+
+    color:var(--primary);
+
+}
+
+
+.work-box ul {
+
+    margin-bottom:30px;
+
+}
+
+
+.work-box li {
+
+    padding:14px 0;
+
+    font-size:17px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+
+.work-description {
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+
+/* 하는 일 */
+
+.work-do {
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* 하지 않는 일 */
+
+.work-not {
+
+    background:#f5f2ed;
+
+}
+
+
+
+.work-not li {
+
+    color:#666;
+
+}
+
+
+
+
+
+/* =====================
+   BENEFITS SECTION
+===================== */
+
+
+.benefit-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+
+
+.benefit-card {
+
+    background:white;
+
+    padding:35px 30px;
+
+    border-radius:var(--radius);
+
+    border:1px solid var(--border);
+
+    transition:.3s ease;
+
+}
+
+
+
+.benefit-card:hover {
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.benefit-card h3 {
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+}
+
+
+
+.benefit-card p {
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+
+
+
+
+/* =====================
+   ACCOMMODATION
+===================== */
+
+
+.accommodation-content {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+
+
+.accommodation-image {
+
+    overflow:hidden;
+
+    border-radius:var(--radius);
+
+}
+
+
+
+.accommodation-image img {
+
+    aspect-ratio:1/0.8;
+
+    object-fit:cover;
+
+}
+
+
+
+.accommodation-info h3 {
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+}
+
+
+
+.accommodation-info p {
+
+    color:var(--text-light);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.accommodation-info ul li {
+
+    padding:12px 0;
+
+    border-bottom:1px solid var(--border);
+
+    font-size:16px;
+
+}
+
+
+
+.accommodation-info .location {
+
+    margin-top:25px;
+
+    font-size:14px;
+
+    color:#888;
+
+}
+
+
+
+
+
+/* =====================
+   CONDITIONS
+===================== */
+
+
+.condition-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.condition-card {
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:30px 20px;
+
+    text-align:center;
+
+}
+
+
+
+.condition-card h3 {
+
+    font-size:15px;
+
+    color:#777;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.condition-card p {
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+
+
+.condition-card span {
+
+    font-size:13px;
+
+    color:#888;
+
+}
+
+
+
+
+
+/* =====================
+   MOBILE
+===================== */
+
+
+@media(max-width:900px){
+
+
+    .work-compare {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .benefit-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .accommodation-content {
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+
+    .condition-grid {
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .work-box {
+
+        padding:30px 25px;
+
+    }
+
+
+    .work-box h3 {
+
+        font-size:22px;
+
+    }
+
+
+    .benefit-card {
+
+        padding:30px 25px;
+
+    }
+
+
+    .accommodation-info h3 {
+
+        font-size:24px;
+
+    }
+
+
+    .condition-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
 
 }
