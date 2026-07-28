@@ -1235,13 +1235,26 @@ ul {
 
     /* 근무 조건 */
 
+    @media(max-width:900px){
+
+    .condition-grid {
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
     .condition-grid {
 
         grid-template-columns:1fr;
 
-        gap:15px;
-
     }
+
+}
 
 
     .condition-card {
