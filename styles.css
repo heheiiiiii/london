@@ -390,7 +390,134 @@ ul {
 
 }
 
+/* =====================
+   PROCESS
+===================== */
 
+.process-grid {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    max-width:750px;
+
+    margin:0 auto;
+
+}
+
+
+.process-card {
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+    padding:30px;
+
+    background:#ffffff;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+}
+
+
+.process-card > span {
+
+    flex-shrink:0;
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--accent);
+
+    color:white;
+
+    border-radius:50%;
+
+    font-weight:700;
+
+    font-size:15px;
+
+}
+
+
+.process-content {
+
+    flex:1;
+
+}
+
+
+.process-content h3 {
+
+    font-size:20px;
+
+    color:var(--primary);
+
+    margin-bottom:8px;
+
+}
+
+
+.process-content p {
+
+    font-size:15px;
+
+    color:var(--text-light);
+
+}
+
+
+@media(max-width:768px){
+
+    .process-card {
+
+        padding:22px;
+
+        gap:16px;
+
+    }
+
+
+    .process-card > span {
+
+        width:40px;
+
+        height:40px;
+
+        font-size:13px;
+
+    }
+
+
+    .process-content h3 {
+
+        font-size:17px;
+
+    }
+
+
+    .process-content p {
+
+        font-size:14px;
+
+    }
+
+}
 
 
 
