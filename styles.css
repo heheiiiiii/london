@@ -796,9 +796,8 @@ ul {
 
 .condition-grid {
 
-    display:grid;
+grid-template-columns:repeat(4,1fr);
 
-    grid-template-columns:repeat(5,1fr);
 
     gap:20px;
 
@@ -863,35 +862,45 @@ ul {
     text-align:center;
 }
 
+.people-box {
 
-.people-list {
     max-width:800px;
-    margin:0 auto 30px;
 
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-}
-
-
-.people-list p {
+    margin:auto;
 
     background:white;
 
-    padding:22px 30px;
+    padding:45px;
 
-    border-radius:18px;
+    border-radius:var(--radius);
 
     border:1px solid var(--border);
 
-    font-size:18px;
-
-    color:var(--primary);
-
     box-shadow:var(--shadow);
+
+    text-align:center;
 
 }
 
+
+.people-box p {
+
+    font-size:18px;
+
+    margin-bottom:20px;
+
+    color:#555;
+
+}
+
+
+.people-box .small {
+
+    font-size:14px;
+
+    color:#888;
+
+}
 
 .people-note {
 
@@ -927,49 +936,182 @@ ul {
 ===================== */
 
 
-@media(max-width:900px){
+/* =====================
+   MOBILE OPTIMIZATION
+===================== */
 
+@media(max-width:768px){
+
+
+    /* 전체 여백 조정 */
+
+    .section {
+
+        padding:70px 0;
+
+    }
+
+
+    .container {
+
+        padding:0 20px;
+
+    }
+
+
+
+    /* 네비게이션 */
+
+    .nav-container {
+
+        padding:15px 20px;
+
+    }
+
+
+    .nav-logo {
+
+        font-size:17px;
+
+    }
+
+
+    .nav-menu {
+
+        gap:12px;
+
+    }
+
+
+    .nav-link {
+
+        display:none;
+
+    }
+
+
+    .cta-link {
+
+        display:block;
+
+        padding:9px 18px;
+
+        font-size:14px;
+
+    }
+
+
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height:600px;
+
+        height:90vh;
+
+    }
+
+
+    .hero-content {
+
+        padding:0 20px;
+
+    }
+
+
+    .hero-label {
+
+        font-size:11px;
+
+        letter-spacing:2px;
+
+        margin-bottom:18px;
+
+    }
+
+
+    .hero-title {
+
+        font-size:42px;
+
+        letter-spacing:-1px;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .hero-subtitle {
+
+        font-size:17px;
+
+        line-height:1.6;
+
+        margin-bottom:35px;
+
+    }
+
+
+    .hero-button {
+
+        padding:14px 40px;
+
+    }
+
+
+
+
+    /* SECTION TITLE */
+
+    .section-title {
+
+        font-size:28px;
+
+        margin-bottom:40px;
+
+    }
+
+
+
+
+
+    /* ABOUT */
+
+    .about-text p {
+
+        font-size:17px;
+
+        margin-bottom:18px;
+
+    }
+
+
+    .about-text p:first-child {
+
+        font-size:23px;
+
+    }
+
+
+
+
+
+    /* WORK */
 
     .work-compare {
 
         grid-template-columns:1fr;
 
-    }
-
-
-    .benefit-grid {
-
-        grid-template-columns:1fr;
+        gap:20px;
 
     }
-
-
-    .accommodation-content {
-
-        grid-template-columns:1fr;
-
-        gap:35px;
-
-    }
-
-
-    .condition-grid {
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-
-}
-
-
-
-@media(max-width:600px){
 
 
     .work-box {
 
-        padding:30px 25px;
+        padding:30px 22px;
 
     }
 
@@ -978,26 +1120,229 @@ ul {
 
         font-size:22px;
 
+        margin-bottom:20px;
+
     }
 
 
-    .benefit-card {
+    .work-box li {
 
-        padding:30px 25px;
+        font-size:15px;
+
+        padding:12px 0;
+
+    }
+
+
+
+
+    /* 제공사항 / 숙소 */
+
+    .accommodation-content {
+
+        grid-template-columns:1fr;
+
+        gap:30px;
 
     }
 
 
     .accommodation-info h3 {
 
-        font-size:24px;
+        font-size:23px;
 
     }
 
 
+    .accommodation-info p {
+
+        font-size:15px;
+
+    }
+
+
+
+    .accommodation-info ul li {
+
+        font-size:15px;
+
+    }
+
+
+
+
+    /* 근무 조건 */
+
     .condition-grid {
 
         grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+
+    .condition-card {
+
+        padding:25px 20px;
+
+    }
+
+
+    .condition-card p {
+
+        font-size:18px;
+
+    }
+
+
+
+
+
+    /* 이런 분과 잘 맞아요 */
+
+    .people-box {
+
+        padding:30px 22px;
+
+    }
+
+
+    .people-box p {
+
+        font-size:16px;
+
+        margin-bottom:16px;
+
+    }
+
+
+    .people-box .small {
+
+        font-size:13px;
+
+    }
+
+
+
+
+    /* 이전 스텝 이야기 */
+
+    .review-card {
+
+        padding:30px 22px;
+
+    }
+
+
+    .review-card p {
+
+        font-size:15px;
+
+    }
+
+
+
+
+
+    /* 지원 과정 */
+
+    .process-grid {
+
+        gap:18px;
+
+    }
+
+
+    .process-card {
+
+        padding:22px;
+
+        gap:15px;
+
+    }
+
+
+    .process-card > span {
+
+        width:38px;
+
+        height:38px;
+
+        font-size:12px;
+
+    }
+
+
+    .process-content h3 {
+
+        font-size:17px;
+
+    }
+
+
+    .process-content p {
+
+        font-size:14px;
+
+    }
+
+
+
+
+
+    /* FAQ */
+
+    .faq-question {
+
+        padding:18px;
+
+    }
+
+
+    .faq-question h3 {
+
+        font-size:15px;
+
+    }
+
+
+    .faq-answer p {
+
+        font-size:14px;
+
+        padding:0 18px 18px;
+
+    }
+
+
+
+
+
+    /* 지원 */
+
+    .apply h2 {
+
+        font-size:26px;
+
+    }
+
+
+    .apply-button {
+
+        padding:14px 45px;
+
+    }
+
+
+
+
+
+    /* FOOTER */
+
+    .footer {
+
+        padding:45px 0;
 
     }
 
