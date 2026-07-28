@@ -1,35 +1,36 @@
-/* =========================================
-   London Step Recruitment Landing Page
-   ========================================= */
+/* =================================
+   London Housekeeping Staff
+   Minimal London Style
+================================= */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&family=Pretendard:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 
 
 :root {
 
-    --navy: #162536;
-    --beige: #f7f3ed;
-    --cream: #fcfaf7;
-    --brown: #b18a62;
-    --gold: #c59b6d;
-    --text: #333333;
-    --gray: #707070;
-    --line: #e8e1d8;
+    --bg: #f8f5ef;
     --white: #ffffff;
 
+    --text: #292621;
+    --sub-text: #6e685f;
 
-    --shadow:
-    0 15px 40px rgba(0,0,0,0.08);
+    --accent: #9b7653;
 
-    --radius:
-    20px;
+    --border: #ded7cc;
+
+    --dark: #1f1d1a;
+
+
+    --serif:
+    'Noto Serif KR', serif;
+
+    --sans:
+    'Noto Sans KR', sans-serif;
 
 }
 
 
-
-/* Reset */
 
 * {
     margin:0;
@@ -45,17 +46,16 @@ html {
 
 body {
 
-    font-family:
-    Pretendard,
-    "Apple SD Gothic Neo",
-    sans-serif;
+    background:var(--bg);
 
     color:var(--text);
-    background:var(--cream);
+
+    font-family:var(--sans);
 
     line-height:1.7;
 
 }
+
 
 
 img {
@@ -70,17 +70,69 @@ a {
 }
 
 
-ul {
-    list-style:none;
+
+.container {
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:0 24px;
+
+}
+
+
+
+.section {
+
+    padding:100px 0;
+
+}
+
+
+
+h1,h2 {
+
+    font-family:var(--serif);
+
+    font-weight:600;
+
+    letter-spacing:-0.04em;
+
+}
+
+
+h2 {
+
+    font-size:34px;
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+
+
+p {
+
+    color:var(--sub-text);
+
+    font-size:16px;
+
 }
 
 
 
 
 
-/* =========================================
-   Navigation
-========================================= */
+
+
+/* ===============================
+NAVIGATION
+================================ */
 
 
 .navbar {
@@ -88,20 +140,16 @@ ul {
     position:fixed;
 
     top:0;
-    left:0;
 
     width:100%;
 
     z-index:1000;
 
-    background:
-    rgba(252,250,247,.85);
+    padding:18px 0;
 
-    backdrop-filter:
-    blur(12px);
+    background:rgba(248,245,239,.85);
 
-    border-bottom:
-    1px solid rgba(0,0,0,.05);
+    backdrop-filter:blur(10px);
 
 }
 
@@ -109,20 +157,13 @@ ul {
 
 .nav-container {
 
-    max-width:1100px;
-
-    margin:auto;
-
-    height:72px;
-
-    padding:
-    0 24px;
-
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
+
+    padding:0 24px;
 
 }
 
@@ -130,69 +171,46 @@ ul {
 
 .logo {
 
-    font-family:
-    "Noto Serif KR",
-    serif;
+    font-family:var(--serif);
 
     font-size:20px;
 
-    font-weight:700;
-
-    color:var(--navy);
+    font-weight:600;
 
 }
 
 
 
-nav {
+.nav-apply {
 
-    display:flex;
+    color:white;
 
-    gap:28px;
+    background:var(--dark);
 
-    align-items:center;
-
-}
-
-
-
-nav a {
-
-    font-size:14px;
-
-    color:#555;
-
-}
-
-
-
-.nav-button {
-
-    background:var(--navy);
-
-    color:white !important;
-
-    padding:
-    10px 22px;
+    padding:10px 22px;
 
     border-radius:30px;
 
+    font-size:14px;
+
 }
 
 
 
 
 
-/* =========================================
- Hero
-========================================= */
+
+
+/* ===============================
+HERO
+================================ */
 
 
 .hero {
 
     height:100vh;
 
-    min-height:700px;
+    min-height:650px;
 
     position:relative;
 
@@ -202,41 +220,20 @@ nav a {
 
     justify-content:center;
 
-    overflow:hidden;
-
-}
-
-
-
-.hero-image {
-
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-}
-
-
-
-.hero-overlay {
-
-    position:absolute;
-
-    inset:0;
+    text-align:center;
 
     background:
 
     linear-gradient(
-    120deg,
-    rgba(15,25,35,.72),
-    rgba(15,25,35,.35)
-    );
+    rgba(20,18,15,.45),
+    rgba(20,18,15,.55)
+    ),
+
+    url("images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
 
 }
 
@@ -244,15 +241,11 @@ nav a {
 
 .hero-content {
 
-    position:relative;
-
-    z-index:2;
-
-    text-align:center;
-
     color:white;
 
-    padding:20px;
+    padding:0 24px;
+
+    animation:fadeUp 1s ease forwards;
 
 }
 
@@ -260,53 +253,13 @@ nav a {
 
 .hero-small {
 
-    letter-spacing:3px;
+    color:white;
 
-    font-size:13px;
+    letter-spacing:4px;
 
-    opacity:.8;
-
-    margin-bottom:25px;
-
-}
-
-
-
-.hero h1 {
-
-    font-family:
-    "Noto Serif KR",
-    serif;
-
-    font-size:
-
-    clamp(38px,6vw,64px);
-
-    margin-bottom:30px;
-
-}
-
-
-
-.hero h2 {
-
-    font-size:
-
-    clamp(22px,3vw,34px);
-
-    line-height:1.5;
+    font-size:12px;
 
     margin-bottom:25px;
-
-    font-weight:600;
-
-}
-
-
-
-.hero-content p {
-
-    font-size:17px;
 
     opacity:.9;
 
@@ -314,23 +267,48 @@ nav a {
 
 
 
+.hero h1 {
+
+    color:white;
+
+    font-size:56px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.hero-description {
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+}
+
+
+
+
+
 .main-button {
+
 
     display:inline-block;
 
-    margin-top:35px;
-
-    padding:
-
-    16px 45px;
-
     background:white;
 
-    color:var(--navy);
+    color:var(--text);
 
-    border-radius:50px;
+    padding:15px 45px;
 
-    font-weight:700;
+    border-radius:40px;
+
+    font-weight:600;
 
     transition:.3s;
 
@@ -346,57 +324,35 @@ nav a {
 
 
 
-.hero-info {
-
-    margin-top:45px;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-
-}
 
 
 
-.hero-info span {
 
-    padding:
-    8px 18px;
 
-    background:
-    rgba(255,255,255,.15);
+/* ===============================
+INTRO
+================================ */
 
-    border-radius:30px;
 
-    font-size:14px;
+.intro {
+
+    text-align:center;
 
 }
 
 
 
+.intro h2 {
 
-
-/* =========================================
- Common Section
-========================================= */
-
-
-.section {
-
-    padding:
-    100px 20px;
+    margin-bottom:30px;
 
 }
 
 
 
-.container {
+.intro p {
 
-    max-width:1000px;
+    max-width:600px;
 
     margin:auto;
 
@@ -404,98 +360,77 @@ nav a {
 
 
 
-.gray {
-
-    background:var(--beige);
-
-}
-
-
-
-.section h2 {
-
-    font-family:
-    "Noto Serif KR",
-    serif;
-
-    text-align:center;
-
-    font-size:
-
-    clamp(28px,4vw,40px);
-
-    color:var(--navy);
-
-    margin-bottom:50px;
-
-}
-
-
-
-.center-text {
-
-    text-align:center;
-
-    font-size:18px;
-
-    color:#555;
-
-    margin-bottom:25px;
-
-}
 
 
 
 
 
-/* =========================================
- Cards
-========================================= */
+/* ===============================
+BENEFITS
+================================ */
 
 
-.card {
-
-    background:white;
-
-    border-radius:var(--radius);
-
-    padding:35px;
-
-    box-shadow:var(--shadow);
-
-}
-
-
-
-.card h3 {
-
-    font-size:20px;
-
-    color:var(--navy);
-
-    margin-bottom:20px;
-
-}
-
-
-
-.card li {
-
-    padding:8px 0;
-
-    color:#555;
-
-}
-
-
-
-
-
-.two-column {
+.benefit-list {
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+}
+
+
+
+.benefit-item {
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+
+
+.icon {
+
+    font-size:14px;
+
+    color:var(--accent);
+
+    letter-spacing:2px;
+
+}
+
+
+
+.benefit-item h3 {
+
+    margin:20px 0;
+
+    font-size:22px;
+
+    font-family:var(--serif);
+
+}
+
+
+
+
+
+
+
+
+/* ===============================
+WORK
+================================ */
+
+
+.work-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
 
     gap:30px;
 
@@ -503,48 +438,13 @@ nav a {
 
 
 
-.notice {
-
-    text-align:center;
-
-    margin-top:40px;
-
-    font-weight:600;
-
-    color:var(--brown);
-
-}
-
-
-
-
-
-
-/* =========================================
- Condition
-========================================= */
-
-
-.condition-grid {
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(5,1fr);
-
-    gap:20px;
-
-}
-
-
-
-.condition-grid div {
+.work-card {
 
     background:white;
 
-    padding:30px 20px;
+    padding:45px;
 
-    border-radius:18px;
+    border:1px solid var(--border);
 
     text-align:center;
 
@@ -552,37 +452,70 @@ nav a {
 
 
 
-.condition-grid h3 {
+.work-card h3 {
 
-    font-size:14px;
+    font-family:var(--serif);
 
-    color:#888;
-
-}
-
-
-
-.condition-grid p {
-
-    margin:15px 0;
-
-    font-size:20px;
-
-    font-weight:700;
-
-    color:var(--navy);
+    font-size:22px;
 
 }
 
 
 
 
-/* =========================================
- Accommodation
-========================================= */
 
 
-.image-text {
+
+/* ===============================
+NOT WORK
+================================ */
+
+
+.not-work {
+
+    background:#eee8de;
+
+    text-align:center;
+
+}
+
+
+
+.not-list {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.not-list p {
+
+    padding:15px 30px;
+
+    background:white;
+
+    border-radius:30px;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+ACCOMMODATION
+================================ */
+
+
+.accommodation .container {
 
     display:grid;
 
@@ -596,46 +529,130 @@ nav a {
 
 
 
-.image-text img {
+.image-box {
 
-    border-radius:25px;
+    aspect-ratio:1;
 
-    box-shadow:var(--shadow);
+    background:#ddd;
 
-}
+    display:flex;
 
+    align-items:center;
 
+    justify-content:center;
 
-.image-text li {
-
-    padding:10px 0;
-
-    border-bottom:1px solid var(--line);
+    color:#777;
 
 }
 
 
 
+.text-box h2 {
+
+    text-align:left;
+
+}
 
 
-/* =========================================
- Review
-========================================= */
+
+.text-box li {
+
+    margin-top:15px;
+
+    color:var(--sub-text);
+
+}
 
 
-.review {
 
-    max-width:750px;
 
-    margin:auto;
+
+
+
+
+/* ===============================
+CONDITIONS
+================================ */
+
+
+.condition-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.condition-grid div {
+
+    text-align:center;
+
+    padding:25px 10px;
+
+    border-top:1px solid var(--border);
+
+}
+
+
+
+.condition-grid h3 {
+
+    font-size:15px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+PEOPLE
+================================ */
+
+
+.people {
+
+    text-align:center;
+
+}
+
+
+
+.people p {
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+
+
+
+/* ===============================
+REVIEW
+================================ */
+
+
+.review-box {
 
     background:white;
 
     padding:45px;
 
-    border-radius:25px;
+    max-width:700px;
 
-    box-shadow:var(--shadow);
+    margin:auto;
 
     text-align:center;
 
@@ -643,11 +660,34 @@ nav a {
 
 
 
-.review p {
 
-    font-size:18px;
 
-    font-style:italic;
+
+
+/* ===============================
+PROCESS
+================================ */
+
+
+.process-list {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:50px;
+
+    text-align:center;
+
+}
+
+
+
+.process-list div {
+
+    font-family:var(--serif);
+
+    font-size:20px;
 
 }
 
@@ -655,77 +695,25 @@ nav a {
 
 
 
-/* =========================================
- FAQ
-========================================= */
-
-
-.faq-item {
-
-    background:white;
-
-    margin-bottom:15px;
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-}
 
 
 
-.faq-item button {
-
-    width:100%;
-
-    padding:25px;
-
-    background:none;
-
-    border:none;
-
-    text-align:left;
-
-    font-size:16px;
-
-    font-weight:600;
-
-}
-
-
-
-.faq-item div {
-
-    padding:
-    0 25px 25px;
-
-    color:#666;
-
-}
-
-
-
-
-
-/* =========================================
- Apply
-========================================= */
+/* ===============================
+APPLY
+================================ */
 
 
 .apply {
 
-    background:
-    var(--navy);
+    background:var(--dark);
 
     color:white;
 
     text-align:center;
 
-    padding:
-    90px 20px;
+    padding:100px 24px;
 
 }
-
 
 
 .apply h2 {
@@ -736,90 +724,56 @@ nav a {
 
 
 
-.apply a {
+.apply .main-button {
 
-    display:inline-block;
-
-    margin-top:30px;
-
-    background:
-    var(--gold);
-
-    padding:
-    16px 55px;
-
-    border-radius:50px;
-
-    font-weight:700;
+    margin-top:20px;
 
 }
 
 
 
-.contact {
-
-    margin-top:40px;
-
-    opacity:.9;
-
-}
 
 
+
+/* ===============================
+FOOTER
+================================ */
 
 
 footer {
 
-    padding:30px;
-
     text-align:center;
 
-    background:#111;
-
-    color:white;
-
-    font-size:13px;
+    padding:60px 20px;
 
 }
 
 
 
 
+/* ===============================
+ANIMATION
+================================ */
 
 
-/* =========================================
- Fixed Apply Button Mobile
-========================================= */
+@keyframes fadeUp {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
 
 
-@media(max-width:768px){
+    to {
 
+        opacity:1;
 
-.navbar nav a:not(.nav-button){
+        transform:none;
 
-    display:none;
-
-}
-
-
-.nav-container{
-
-    height:60px;
-
-}
-
-
-
-.hero {
-
-    min-height:650px;
-
-}
-
-
-
-.hero-info {
-
-    display:none;
+    }
 
 }
 
@@ -827,52 +781,25 @@ footer {
 
 .section {
 
-    padding:
-    70px 20px;
+    animation:fadeUp .8s ease;
 
 }
 
 
 
-.two-column,
-.image-text {
-
-    grid-template-columns:1fr;
-
-    gap:25px;
-
-}
 
 
 
-.condition-grid {
 
-    grid-template-columns:
-    repeat(2,1fr);
-
-}
+/* ===============================
+FIXED APPLY BUTTON MOBILE
+================================ */
 
 
-
-.card {
-
-    padding:25px;
-
-}
+@media(max-width:768px){
 
 
-
-.apply {
-
-    padding-bottom:120px;
-
-}
-
-
-
-/* Mobile floating button */
-
-.nav-button {
+.nav-apply {
 
     position:fixed;
 
@@ -884,38 +811,69 @@ footer {
 
     text-align:center;
 
-    background:var(--gold);
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.2);
+    background:var(--dark);
 
 }
 
 
 
-}
-
-
-@media(max-width:480px){
-
-
-.condition-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-
-.hero h1{
+.hero h1 {
 
     font-size:38px;
 
 }
 
 
-.hero-content p{
 
-    font-size:15px;
+.hero-description {
+
+    font-size:16px;
+
+}
+
+
+
+.section {
+
+    padding:70px 0;
+
+}
+
+
+
+h2 {
+
+    font-size:28px;
+
+}
+
+
+
+.benefit-list,
+
+.work-grid,
+
+.accommodation .container {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.condition-grid {
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.process-list {
+
+    flex-direction:column;
+
+    gap:30px;
 
 }
 
