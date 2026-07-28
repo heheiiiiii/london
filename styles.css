@@ -927,6 +927,66 @@ grid-template-columns:repeat(4,1fr);
 
 
 }
+/* =====================
+   PEOPLE TEXT STYLE
+===================== */
+
+.people-box strong {
+
+    display:block;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+
+.people-box p {
+
+    margin-bottom:30px;
+
+    line-height:1.8;
+
+}
+
+
+.people-box .small-text {
+
+    display:block;
+
+    font-size:15px;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    .people-box strong {
+
+        font-size:18px;
+
+    }
+
+
+    .people-box .small-text {
+
+        font-size:14px;
+
+    }
+
+
+}
 
 
 
