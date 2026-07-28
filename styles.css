@@ -432,7 +432,7 @@ ul {
 
 .about {
 
-    text-align:center;
+    text-align:left;
 
 }
 
@@ -441,7 +441,7 @@ ul {
 .about-text {
 
     max-width:
-    700px;
+    800px;
 
     margin:auto;
 
@@ -466,13 +466,14 @@ ul {
 .about-text p:first-child {
 
     font-size:
-    28px;
+    30px;
 
     font-weight:
     700;
 
     color:
     var(--primary);
+    line-height:1.4;
 
 }
 
@@ -859,14 +860,14 @@ grid-template-columns:repeat(4,1fr);
 ===================== */
 
 .people {
-    text-align:center;
+    text-align:left;
 }
 
 .people-box {
 
     max-width:800px;
 
-    margin:auto;
+    margin:0;
 
     background:white;
 
@@ -878,7 +879,7 @@ grid-template-columns:repeat(4,1fr);
 
     box-shadow:var(--shadow);
 
-    text-align:center;
+    text-align:left;
 
 }
 
@@ -1255,6 +1256,22 @@ grid-template-columns:repeat(4,1fr);
 
     }
 
+   @media(max-width:768px){
+
+    .about-text p:first-child {
+
+        font-size:24px;
+
+    }
+
+
+    .people-box {
+
+        padding:30px 25px;
+
+    }
+
+}
 
 
 
