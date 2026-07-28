@@ -263,7 +263,7 @@ a {
 .cta-link {
 
     background:
-    var(--accent);
+    var(--primary);
 
     color:white;
 
@@ -490,7 +490,7 @@ a {
 
 
     background:
-    var(--accent);
+    var(--background);
 
 
     color:white;
@@ -1156,7 +1156,7 @@ a {
 
 
     background:
-    #202020;
+    white;
 
 
     color:white;
@@ -1228,7 +1228,7 @@ a {
 
 
     background:
-    var(--accent);
+    var(--background);
 
 
     border-radius:
@@ -1683,7 +1683,7 @@ a {
 .footer {
 
 
-    background:#151515;
+    background:white;
 
 
     color:white;
