@@ -1,38 +1,78 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-const images = [
-"사진1주소",
-"사진2주소",
-"사진3주소"
-];
 
-let current = 0;
+    /* =====================
+       ROOM IMAGE SLIDER
+    ===================== */
 
 
-document.querySelector(".next").onclick=function(){
-
-current++;
-
-if(current >= images.length){
-current=0;
-}
-
-document.querySelector("#room-image").src=images[current];
-
-};
+    const nextButton = document.querySelector(".next");
+    const prevButton = document.querySelector(".prev");
+    const roomImage = document.querySelector("#room-image");
 
 
-document.querySelector(".prev").onclick=function(){
+    if(nextButton && prevButton && roomImage){
 
-current--;
 
-if(current < 0){
-current=images.length-1;
-}
+        const images = [
 
-document.querySelector("#room-image").src=images[current];
+            "사진1주소",
+            "사진2주소",
+            "사진3주소"
 
-};
+        ];
+
+
+        let current = 0;
+
+
+
+        nextButton.onclick = function(){
+
+
+            current++;
+
+
+            if(current >= images.length){
+
+                current = 0;
+
+            }
+
+
+            roomImage.src = images[current];
+
+
+        };
+
+
+
+
+        prevButton.onclick = function(){
+
+
+            current--;
+
+
+            if(current < 0){
+
+                current = images.length - 1;
+
+            }
+
+
+            roomImage.src = images[current];
+
+
+        };
+
+
+    }
+
+
+
+
+
     /* =====================
        FAQ ACCORDION
     ===================== */
@@ -47,19 +87,36 @@ document.querySelector("#room-image").src=images[current];
         const question = item.querySelector(".faq-question");
 
 
-       question.addEventListener("click", () => {
+        if(question){
 
-    const isActive = item.classList.contains("active");
 
-    faqItems.forEach(other => {
-        other.classList.remove("active");
-    });
+            question.addEventListener("click", () => {
 
-    if (!isActive) {
-        item.classList.add("active");
-    }
 
-});
+                const isActive = item.classList.contains("active");
+
+
+
+                faqItems.forEach(other => {
+
+                    other.classList.remove("active");
+
+                });
+
+
+
+                if(!isActive){
+
+                    item.classList.add("active");
+
+                }
+
+
+            });
+
+
+        }
+
 
     });
 
@@ -80,8 +137,9 @@ document.querySelector("#room-image").src=images[current];
         anchor.addEventListener("click", function(e){
 
 
-            const target =
+            const target = 
             document.querySelector(this.getAttribute("href"));
+
 
 
             if(target){
@@ -90,17 +148,22 @@ document.querySelector("#room-image").src=images[current];
                 e.preventDefault();
 
 
+
                 const navbarHeight =
                 document.querySelector(".navbar").offsetHeight;
 
 
+
                 window.scrollTo({
+
 
                     top:
                     target.offsetTop - navbarHeight,
 
+
                     behavior:
                     "smooth"
+
 
                 });
 
@@ -119,7 +182,6 @@ document.querySelector("#room-image").src=images[current];
 
 
 
-
     /* =====================
        SCROLL FADE ANIMATION
     ===================== */
@@ -127,7 +189,7 @@ document.querySelector("#room-image").src=images[current];
 
     const revealElements =
     document.querySelectorAll(
-        ".section, .benefit-card, .work-box, .condition-card, .process-card, .review-card"
+        ".section, .benefit-card, .work-box, .condition-card, .process-card, .review-card, .people-box, .faq-item, .accommodation-content"
     );
 
 
@@ -143,8 +205,11 @@ document.querySelector("#room-image").src=images[current];
 
 
 
+
     const observer =
     new IntersectionObserver(
+
+
         entries => {
 
 
@@ -168,15 +233,17 @@ document.querySelector("#room-image").src=images[current];
 
         },
 
+
         {
 
-            threshold:
-            0.15
+            threshold:0.15
 
         }
 
 
     );
+
+
 
 
 
@@ -187,9 +254,6 @@ document.querySelector("#room-image").src=images[current];
 
 
     });
-
-
-
 
 
 
