@@ -15,25 +15,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const question = item.querySelector(".faq-question");
 
 
-        question.addEventListener("click", () => {
+       question.addEventListener("click", () => {
 
+    const isActive = item.classList.contains("active");
 
-            faqItems.forEach(other => {
+    faqItems.forEach(other => {
+        other.classList.remove("active");
+    });
 
-                if(other !== item){
+    if (!isActive) {
+        item.classList.add("active");
+    }
 
-                    other.classList.remove("active");
-
-                }
-
-            });
-
-
-            item.classList.toggle("active");
-
-
-        });
-
+});
 
     });
 
