@@ -1,6 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+const images = [
+"사진1주소",
+"사진2주소",
+"사진3주소"
+];
 
+let current = 0;
+
+
+document.querySelector(".next").onclick=function(){
+
+current++;
+
+if(current >= images.length){
+current=0;
+}
+
+document.querySelector("#room-image").src=images[current];
+
+};
+
+
+document.querySelector(".prev").onclick=function(){
+
+current--;
+
+if(current < 0){
+current=images.length-1;
+}
+
+document.querySelector("#room-image").src=images[current];
+
+};
     /* =====================
        FAQ ACCORDION
     ===================== */
