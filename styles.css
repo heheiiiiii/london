@@ -941,3 +941,502 @@ ul {
 
 
 }
+
+/* =====================
+   PEOPLE SECTION
+===================== */
+
+.people {
+
+    text-align:center;
+
+}
+
+
+.people-list {
+
+    max-width:750px;
+
+    margin:0 auto 35px;
+
+}
+
+
+
+.people-list p {
+
+    font-size:20px;
+
+    margin-bottom:20px;
+
+    color:#444;
+
+}
+
+
+
+.people-note {
+
+    font-size:15px;
+
+    color:var(--text-light);
+
+}
+
+
+
+
+
+/* =====================
+   REVIEW
+===================== */
+
+
+.review-card {
+
+    max-width:750px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:var(--radius);
+
+    border:1px solid var(--border);
+
+    text-align:center;
+
+}
+
+
+
+.review-card p {
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.review-card span {
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+/* =====================
+   PROCESS
+===================== */
+
+
+.process-grid {
+
+    max-width:750px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+
+.process-card {
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+    padding:30px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+}
+
+
+
+.process-card > span {
+
+    width:48px;
+
+    height:48px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:var(--accent);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+}
+
+
+
+.process-content h3 {
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+    color:var(--primary);
+
+}
+
+
+
+.process-content p {
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+
+
+
+
+/* =====================
+   FAQ
+===================== */
+
+
+.faq-container {
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+
+
+.faq-item {
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    margin-bottom:15px;
+
+    overflow:hidden;
+
+}
+
+
+
+.faq-question {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px;
+
+    cursor:pointer;
+
+}
+
+
+
+.faq-question h3 {
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+
+
+.faq-question span {
+
+    font-size:26px;
+
+    color:var(--accent);
+
+    transition:.3s ease;
+
+}
+
+
+
+.faq-item.active .faq-question span {
+
+    transform:rotate(45deg);
+
+}
+
+
+
+.faq-answer {
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+
+}
+
+
+
+.faq-answer p {
+
+    padding:0 25px 25px;
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+
+
+.faq-item.active .faq-answer {
+
+    max-height:200px;
+
+}
+
+
+
+
+
+/* =====================
+   APPLY
+===================== */
+
+
+.apply {
+
+    background:#222;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+
+.apply h2 {
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.apply p {
+
+    margin-bottom:35px;
+
+    color:rgba(255,255,255,.8);
+
+}
+
+
+
+.apply-button {
+
+    display:inline-block;
+
+    background:white;
+
+    color:#222;
+
+    padding:16px 55px;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+
+
+.apply-button:hover {
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+/* =====================
+   FOOTER
+===================== */
+
+
+.footer {
+
+    background:#222;
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 0;
+
+}
+
+
+
+.footer p {
+
+    color:rgba(255,255,255,.7);
+
+    font-size:14px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.footer .email {
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/* =====================
+   MOBILE
+===================== */
+
+
+@media(max-width:768px){
+
+
+    .people-list p {
+
+        font-size:17px;
+
+    }
+
+
+
+    .review-card {
+
+        padding:30px 22px;
+
+    }
+
+
+
+    .review-card p {
+
+        font-size:16px;
+
+    }
+
+
+
+    .process-card {
+
+        padding:22px;
+
+        gap:16px;
+
+    }
+
+
+
+    .process-card > span {
+
+        width:40px;
+
+        height:40px;
+
+        font-size:13px;
+
+    }
+
+
+
+    .process-content h3 {
+
+        font-size:17px;
+
+    }
+
+
+
+    .faq-question {
+
+        padding:20px;
+
+    }
+
+
+
+    .faq-question h3 {
+
+        font-size:15px;
+
+    }
+
+
+
+    .apply h2 {
+
+        font-size:28px;
+
+    }
+
+
+}
