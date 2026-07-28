@@ -1349,33 +1349,39 @@ a {
 
 
 
-.process-grid {
 
+.process-grid{
 
-    display:grid;
+    display:flex;
 
+    flex-direction:column;
 
-    grid-template-columns:
-    repeat(3,1fr);
+    gap:28px;
 
+    max-width:650px;
 
-    gap:
-    30px;
-
+    margin:0 auto;
 
 }
 
 
+.process-card{
 
-.process-card {
+    display:flex;
 
+    align-items:center;
 
-    text-align:center;
+    gap:25px;
 
+    text-align:left;
 
-    padding:
-    40px 25px;
+    padding:28px;
 
+    background:white;
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow);
 
 }
 
@@ -1421,6 +1427,9 @@ a {
     20px;
 
 
+}
+.process-content{
+    flex:1;
 }
 
 
