@@ -1004,46 +1004,6 @@ ul {
 
 }
 
-/* =====================
-   PEOPLE SECTION
-===================== */
-
-.people {
-
-    text-align:center;
-
-}
-
-
-.people-list {
-
-    max-width:750px;
-
-    margin:0 auto 35px;
-
-}
-
-
-
-.people-list p {
-
-    font-size:20px;
-
-    margin-bottom:20px;
-
-    color:#444;
-
-}
-
-
-
-.people-note {
-
-    font-size:15px;
-
-    color:var(--text-light);
-
-}
 
 
 
