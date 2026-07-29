@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const images = [
 
-            "사진1주소",
-            "사진2주소",
-            "사진3주소"
+            "images/room1.jpg",
+"images/room2.jpg",
+"images/room3.jpg"
 
         ];
 
