@@ -15,12 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         const images = [
-
-            "images/room1.jpg",
+"images/room1.jpg",
 "images/room2.jpg",
 "images/room3.jpg"
-
-        ];
+];
 
 
         let current = 0;
